@@ -59,7 +59,7 @@ GET {{baseUrl}}/films/1
 ### Read film which does not exist
 GET {{baseUrl}}/films/500
 
-//mod
+//mod 1.5
 
 ### Try to create a film with a parameter missing 
 POST {{baseUrl}}/films/
@@ -86,4 +86,27 @@ Content-Type: application/json
 ### Try to read a film with wrong id
 GET {{baseUrl}}/films/100
 
+//mod 1.6
+
+### Delete pizza identified by 2
+DELETE {{baseUrl}}/films/1
+
+### Update the film identified by 1
+PATCH {{baseUrl}}/films/1
+Content-Type: application/json
+
+{
+    "title":"Deadpool 1"
+}
+
+### Create another film
+PUT {{baseUrl}}/films/1
+Content-Type: application/json
+
+{
+    "title":"Star Wars: Episode 2",
+    "duration": 1,
+    "budget": 11,
+    "link":"findIt.com"
+}
 
