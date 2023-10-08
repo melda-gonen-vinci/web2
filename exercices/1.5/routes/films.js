@@ -50,7 +50,7 @@ router.get('/:id', (req, res) => {
   return res.json(AFFICHE[indexOfFilmFound]);
 });
 
-//post new film
+//post new film :)
 router.post('/', (req, res) => {
   const title = req?.body?.title?.trim()?.length !== 0 ? req.body.title : undefined;
   const duration = typeof req?.body?.duration !== 'number' || req.body.duration < 0
